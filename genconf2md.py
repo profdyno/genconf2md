@@ -339,7 +339,7 @@ def build_markdown(fields):
     md = (
         f"---\n"
         f"Date: {fields['date']}\n"
-        f"Author(s): {fields['author']}\n"
+        f"Author(s): [[{fields['author']}]]\n"
         f"Source: Church of Jesus Christ of Latter-day Saints\n"
         f"SourceURL: {fields['url']}\n"
         f"Description: {fields['description']}\n"
@@ -382,7 +382,7 @@ def main():
 
     safe_title = sanitize_filename(fields["title"])
     filename = (
-        f"{fields['year']}{fields['month_abbr']}-"
+        f"{fields['year']} {fields['month_abbr']}-"
         f"{fields['day_abbr']} {fields['session']}-"
         f"{safe_title}.md"
     )
