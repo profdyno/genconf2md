@@ -339,7 +339,7 @@ def build_markdown(fields):
     md = (
         f"---\n"
         f"Date: {fields['date']}\n"
-        f"Author(s): [[{fields['author']}]]\n"
+        f"Author(s): \"[[{fields['author']}]]\"\n"
         f"Source: Church of Jesus Christ of Latter-day Saints\n"
         f"SourceURL: {fields['url']}\n"
         f"Description: {fields['description']}\n"
